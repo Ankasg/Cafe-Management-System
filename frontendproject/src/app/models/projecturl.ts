@@ -1,0 +1,1 @@
+export var url:string = 'http://localhost:9090';

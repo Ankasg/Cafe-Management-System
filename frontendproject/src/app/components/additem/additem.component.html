@@ -1,0 +1,14 @@
+<form #addItemform="ngForm" (ngSubmit)="addItems()" enctype="multipart/form-data">
+  <input type="text" name="itemName" [(ngModel)]="item.itemName" placeholder="Item Name" /><br>
+  <input type="number" name="itemPrice" [(ngModel)]="item.itemPrice" placeholder="Item Price" /><br>
+
+  <select [(ngModel)]="categoryId" name="categoryId" required>
+    <option value="" disabled>Select Category</option>
+    <option *ngFor="let cat of categoryList" [value]="cat.categoryId">{{ cat.categoryName }}</option>
+  </select><br>
+
+  <!-- NEW: File input for image -->
+  <input type="file" (change)="onFileSelected($event)" accept="image/*" required /><br>
+
+  <input type="submit" value="Add Item" />
+</form>

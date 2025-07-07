@@ -1,0 +1,37 @@
+<p></p>
+<div class="login-container">
+  <div class="login-title">Login</div>
+  <form #loginform="ngForm" (ngSubmit)="loginUser()" class="login-form">
+    <div>
+      <input
+        type="email"
+        name="emailid"
+        [(ngModel)]="user.emailId"
+        placeholder="Email"
+        required
+        email
+        #emailid="ngModel"
+      />
+      <div class="error-message" *ngIf="emailid.invalid && (emailid.dirty || emailid.touched)">
+        <span *ngIf="emailid.errors?.['required']">Email is required.</span>
+        <span *ngIf="emailid.errors?.['email']">Enter a valid email.</span>
+      </div>
+    </div>
+    <div>
+      <input
+        type="password"
+        name="password"
+        [(ngModel)]="user.password"
+        placeholder="Password"
+        required
+        minlength="6"
+        #password="ngModel"
+      />
+      <div class="error-message" *ngIf="password.invalid && (password.dirty || password.touched)">
+        <span *ngIf="password.errors?.['required']">Password is required.</span>
+        <span *ngIf="password.errors?.['minlength']">Minimum 6 characters.</span>
+      </div>
+    </div>
+    <button type="submit" class="login-btn" [disabled]="loginform.invalid">Login</button>
+  </form>
+</div>

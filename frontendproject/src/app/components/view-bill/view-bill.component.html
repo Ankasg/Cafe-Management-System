@@ -1,0 +1,35 @@
+
+<h2>Your Bills</h2>
+
+<div *ngIf="paymentMessage" class="alert alert-success">
+  {{ paymentMessage }}
+</div>
+
+<div *ngIf="orders.length === 0">
+  <p>No pending bills to pay.</p>
+</div>
+
+<div *ngFor="let order of orders" class="bill-card">
+  <h3>Order ID: {{ order.orderId }}</h3>
+  <p>Date: {{ order.orderDate | date:'medium' }}</p>
+
+  <p><strong>Bill Amount: ₹{{ order.billAmount }}</strong></p>
+  <ul>
+    <li *ngFor="let orderItem of order.orderItems">
+      {{ orderItem.item.itemName }} - ₹{{ orderItem.item.itemPrice }} × {{ orderItem.quantity }}
+    </li>
+  </ul>
+
+  <hr>
+
+ 
+
+  <br/>
+
+  <!-- ✅ Razorpay Payment Button -->
+  <button (click)="payViaRazorpay(order.orderId, order.billAmount)">
+    Pay with Razorpay
+  </button>
+
+  <hr>
+</div>

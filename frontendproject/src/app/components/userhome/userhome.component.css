@@ -1,0 +1,165 @@
+body {
+  font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+  font-size: 1.08rem;
+  background: linear-gradient(120deg, #ffe4f0 0%, #ffd6ec 100%);
+  min-height: 100vh;
+  margin: 0;
+}
+
+.userhome-container {
+  width: 100%;
+  margin: 0;
+  background: #fff0f6; /* Soft pink background */
+  border-radius: 0;
+  box-shadow: none;
+  padding: 2.5rem 1rem;
+  border: none;
+  position: relative;
+  overflow: visible;
+}
+
+.userhome-container::before {
+  content: " ";
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, #ffe4f0 60%, #ffd6ec 100%);
+  opacity: 0.5;
+  z-index: 0;
+  border-radius: 50%;
+}
+
+.userhome-container::after {
+  content: " ";
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, #ffd6ec 60%, #ffe4f0 100%);
+  opacity: 0.5;
+  z-index: 0;
+  border-radius: 50%;
+}
+
+h2, h3 {
+  font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #e75480;
+  margin-bottom: 1.2rem;
+}
+
+button, .register-btn, .login-btn {
+  font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 0.85rem 2.2rem;
+  font-size: 1.13rem;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #ffb6c1 0%, #ffe4e1 100%);
+  color: #a8325a;
+  cursor: pointer;
+  margin: 0.5rem 0.8rem 0.5rem 0;
+  box-shadow: 0 2px 12px rgba(255, 182, 193, 0.13);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+button:hover, .register-btn:hover, .login-btn:hover {
+  background: linear-gradient(90deg, #ffe4e1 0%, #ffb6c1 100%);
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 6px 18px rgba(231, 84, 128, 0.16);
+}
+
+.userhome-welcome {
+  text-align: center;
+  font-size: 1.5rem; /* Reduced from 2.6rem */
+  font-family: 'Pacifico', cursive, 'Quicksand', Arial, sans-serif;
+  font-weight: bold;
+  color: #e75480;
+  margin-bottom: 1.7rem;
+  letter-spacing: 2px;
+  background: none;
+  border: none;
+  padding: 0.5rem 0;
+  box-shadow: none;
+  text-shadow: 1px 2px 8px #ffd6ec;
+}
+
+.userhome-message {
+  text-align: center;
+  margin: 2rem 0 2.5rem 0;
+  font-size: 1rem;
+  color: #e75480;
+  font-family: 'Caveat', 'Quicksand', 'Segoe UI', Arial, sans-serif; /* Playful handwritten style */
+  font-weight: 600;
+  background: none;
+  border: none;
+  padding: 0.5rem 0;
+  box-shadow: none;
+  letter-spacing: 1px;
+}
+
+input[type="checkbox"] {
+  accent-color: #e75480;
+  margin-right: 0.5rem;
+}
+
+label, p {
+  font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+  font-size: 1.08rem;
+  color: #a8325a;
+  letter-spacing: 0.5px;
+}
+
+hr {
+  border: none;
+  border-top: 1.5px dashed #ffb6c1;
+  margin: 1.2rem 0;
+  background: none;
+}
+
+ul {
+  padding-left: 1.2rem;
+  background: none;
+  border: none;
+}
+
+li {
+  color: #a8325a;
+  font-size: 1.08rem;
+  background: none;
+  border: none;
+}
+
+.userhome-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.2rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  .userhome-container {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .userhome-welcome {
+    font-size: 1.3rem;
+    padding: 1rem 0.5rem;
+  }
+  .userhome-message {
+    font-size: 1rem;
+    padding: 0.8rem 0.5rem;
+  }
+  .userhome-btn-group {
+    gap: 0.7rem;
+  }
+}

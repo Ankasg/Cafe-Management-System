@@ -1,0 +1,150 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background:
+    url('https://curlytales.com/wp-content/uploads/2024/12/Decked-With-83-Cute-Soft-Toys-Kolkata-Welcomes-Its-1st-Teddy-Bear-Themed-Cafe-800x450.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body {
+  font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    url('https://curlytales.com/wp-content/uploads/2024/12/Decked-With-83-Cute-Soft-Toys-Kolkata-Welcomes-Its-1st-Teddy-Bear-Themed-Cafe-800x450.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+p {
+  font-family: 'Pacifico', cursive, 'Quicksand', Arial, sans-serif;
+  color: #e75480;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  letter-spacing: 1px;
+}
+
+button {
+  background: linear-gradient(90deg, #ffb6c1 0%, #ffe4e1 100%);
+  color: #a8325a;
+  font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  border: none;
+  border-radius: 20px;
+  padding: 0.7rem 1.7rem;
+  margin: 1rem 0.7rem 1.5rem 0;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.13);
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ffe4e1 0%, #ffb6c1 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+form {
+  background: #fff0f6;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(231, 84, 128, 0.10);
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  max-width: 350px;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #ffb6c1;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+  margin-bottom: 0.5rem;
+  background: #fff8fb;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #e75480;
+  outline: none;
+}
+
+input[type="submit"] {
+  background: linear-gradient(90deg, #ffb6c1 0%, #ffe4e1 100%);
+  color: #a8325a;
+  font-weight: 700;
+  border: none;
+  border-radius: 20px;
+  padding: 0.7rem 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.13);
+  transition: background 0.3s, transform 0.2s;
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(90deg, #ffe4e1 0%, #ffb6c1 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+select {
+  color: #a8325a;
+}
+
+.adminhome-flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;      /* <-- changed from flex-start to center */
+  gap: 2rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 8vh auto 0 auto;  /* centers the row vertically with some top margin */
+  min-height: 70vh;         /* ensures vertical centering effect */
+}
+
+.adminhome-center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;    /* This centers content vertically */
+  min-height: 100vh;         /* Full viewport height */
+  gap: 2.5rem;
+}
+
+.center-section {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.adminhome-btn-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 500px) {
+  form {
+    padding: 1rem 0.3rem;
+    max-width: 98vw;
+  }
+  button {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+  }
+}

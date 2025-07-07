@@ -1,0 +1,57 @@
+<div class="adminhome-center-column">
+  <!-- Button Row -->
+  <div class="adminhome-btn-row">
+    <button (click)="categoryForm()">Add Category Form</button>
+    <button (click)="itemForm()">Add Item Form</button>
+  </div>
+
+  <!-- Category Section -->
+  <div class="center-section">
+    <div *ngIf="showCategoryForm">
+      <form #addCategoryForm="ngForm" (ngSubmit)="addCategory()">
+        <input
+          type="text"
+          name="categoryName"
+          [(ngModel)]="category.categoryName"
+          placeholder="Enter category name"
+        /> <br />
+        <input type="submit" value="Add Category" />
+      </form>
+    </div>
+  </div>
+
+  <!-- Item Section -->
+  <div class="center-section">
+    <div *ngIf="showItemForm">
+      <form #addItemForm="ngForm" (ngSubmit)="addItem()">
+        <input
+          type="text"
+          name="itemName"
+          [(ngModel)]="item.itemName"
+          placeholder="Enter item name"
+        /> <br />
+        <input
+          type="number"
+          name="itemPrice"
+          [(ngModel)]="item.itemPrice"
+          placeholder="Enter price"
+        /> <br />
+
+        <!-- Dropdown for category -->
+        <select [(ngModel)]="categoryId" name="categoryId" required>
+          <option value="" disabled selected>Select Category</option>
+          <option *ngFor="let cat of categoryList" [value]="cat.categoryId">{{ cat.categoryName }}</option>
+        </select><br />
+
+        <input
+          type="text"
+          name="imageUrl"
+          [(ngModel)]="item.imageUrl"
+          placeholder="Enter image URL"
+        /><br />
+
+        <input type="submit" value="Add Item" />
+      </form>
+    </div>
+  </div>
+</div>

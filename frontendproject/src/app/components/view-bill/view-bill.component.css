@@ -1,0 +1,102 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background:
+    linear-gradient(120deg, #ffe4f0 0%, #ffd6ec 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Pacifico', cursive, 'Quicksand', Arial, sans-serif;
+  color: #e75480;
+  font-size: 2.2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.bill-card {
+  background: #fff0f6;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(231, 84, 128, 0.10);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 480px;
+  border: 1.5px solid #ffd6ec;
+  position: relative;
+}
+
+.bill-card h3 {
+  color: #a8325a;
+  font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.bill-card p {
+  color: #e75480;
+  font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+  font-size: 1.08rem;
+  margin: 0.4rem 0;
+}
+
+.bill-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.bill-card li {
+  background: #ffe4f0;
+  margin-bottom: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  color: #a8325a;
+  font-size: 1.05rem;
+  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.08);
+}
+
+button {
+  background: linear-gradient(90deg, #ffb6c1 0%, #ffe4e1 100%);
+  color: #a8325a;
+  font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  border: none;
+  border-radius: 20px;
+  padding: 0.7rem 2.2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.13);
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ffe4e1 0%, #ffb6c1 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.alert-success {
+  background: #e6ffe6;
+  color: #388e3c;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem auto;
+  max-width: 400px;
+  text-align: center;
+  font-size: 1.08rem;
+  box-shadow: 0 2px 8px rgba(56, 142, 60, 0.08);
+}
+
+@media (max-width: 600px) {
+  .bill-card {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+}

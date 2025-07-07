@@ -1,0 +1,98 @@
+<p>register works!</p>
+<!-- <a routerLink ="/login">login user </a> -->
+<div class="form-container">
+  <div class="form-title">Register</div>
+  <form #registerform="ngForm" (ngSubmit)="registerUser()">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        id="username"
+        type="text"
+        name="username"
+        [(ngModel)]="user.userName"
+        placeholder="Enter username"
+        required
+        minlength="3"
+        #username="ngModel"
+      />
+      <div class="error-message" *ngIf="username.invalid && (username.dirty || username.touched)">
+        <span *ngIf="username.errors?.['required']">Username is required.</span>
+        <span *ngIf="username.errors?.['minlength']">Minimum 3 characters.</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="emailid">Email</label>
+      <input
+        id="emailid"
+        type="email"
+        name="emailid"
+        [(ngModel)]="user.emailId"
+        placeholder="Enter email"
+        required
+        email
+        #emailid="ngModel"
+      />
+      <div class="error-message" *ngIf="emailid.invalid && (emailid.dirty || emailid.touched)">
+        <span *ngIf="emailid.errors?.['required']">Email is required.</span>
+        <span *ngIf="emailid.errors?.['email']">Enter a valid email.</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="role">Role</label>
+      <select
+        id="role"
+        name="role"
+        [(ngModel)]="user.role"
+        required
+        #role="ngModel"
+      >
+        <option value="" disabled selected>Select role</option>
+        <option value="admin">Admin</option>
+        <option value="user">User</option>
+      </select>
+      <div class="error-message" *ngIf="role.invalid && (role.dirty || role.touched)">
+        <span *ngIf="role.errors?.['required']">Role is required.</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        name="password"
+        [(ngModel)]="user.password"
+        placeholder="Enter password"
+        required
+        minlength="6"
+        #password="ngModel"
+      />
+      <div class="error-message" *ngIf="password.invalid && (password.dirty || password.touched)">
+        <span *ngIf="password.errors?.['required']">Password is required.</span>
+        <span *ngIf="password.errors?.['minlength']">Minimum 6 characters.</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="mobilenumber">Mobile Number</label>
+      <input
+        id="mobilenumber"
+        type="text"
+        name="mobilenumber"
+        [(ngModel)]="user.mobileNumber"
+        placeholder="Enter mobile number"
+        required
+        pattern="^[0-9]{10}$"
+        #mobilenumber="ngModel"
+      />
+      <div class="error-message" *ngIf="mobilenumber.invalid && (mobilenumber.dirty || mobilenumber.touched)">
+        <span *ngIf="mobilenumber.errors?.['required']">Mobile number is required.</span>
+        <span *ngIf="mobilenumber.errors?.['pattern']">Enter a valid 10-digit number.</span>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="registerform.invalid">Register</button>
+  </form>
+</div>
